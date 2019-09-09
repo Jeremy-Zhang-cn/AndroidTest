@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">用户登录</string>
+	<string name="name_tag">姓名</string>
+	<string name="name_hint">请输入姓名</string>
+	<string name="passwd_tag">密码</string>
+	<string name="passwd_hint">请输入密码</string>
+	<string name="login_btn">登录</string>
+	<string name="signup_btn">注册</string>
+</resources>

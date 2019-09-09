@@ -1,0 +1,22 @@
+<resources>
+
+	<string name="app_name">计算器</string>
+	<string name="Button1">1</string>
+	<string name="Button2">2</string>
+	<string name="Button3">3</string>
+	<string name="Button_plus">+</string>
+	<string name="Button4">4</string>
+	<string name="Button5">5</string>
+	<string name="Button6">6</string>
+	<string name="Button_minus">-</string>
+	<string name="Button7">7</string>
+	<string name="Button8">8</string>
+	<string name="Button9">9</string>
+	<string name="Button_mul">*</string>
+	<string name="Button_div">/</string>
+	<string name="Button0">0</string>
+	<string name="Button_eq">=</string>
+	<string name="Button_del">Del</string>
+
+
+</resources>

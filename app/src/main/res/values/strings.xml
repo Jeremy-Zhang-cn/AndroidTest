@@ -1,0 +1,10 @@
+<resources>
+	<string name="app_name">My Application</string>
+
+	<string name="name_hint">请输入姓名</string>
+	<string name="passwd_hint">请输入密码</string>
+	<string name="botton_msg">登录</string>
+	<string name="todo">TODO</string>
+	<string name="version_msg">v1.0_1</string>
+
+</resources>

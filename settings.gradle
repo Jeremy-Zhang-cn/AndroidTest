@@ -1,0 +1,2 @@
+include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle'
+rootProject.name='My Application'
