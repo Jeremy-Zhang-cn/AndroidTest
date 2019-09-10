@@ -1,2 +1,2 @@
-include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle'
+include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle', ':UIDemo'
 rootProject.name='My Application'

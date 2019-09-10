@@ -6,4 +6,8 @@
 	<string name="passwd_hint">请输入密码</string>
 	<string name="login_btn">登录</string>
 	<string name="signup_btn">注册</string>
+	<string name="female_radio">female</string>
+	<string name="male_radio">male</string>
+	<string name="version_msg">v1.0_1</string>
+	<string name="btn3">count</string>
 </resources>
