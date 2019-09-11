@@ -10,4 +10,15 @@
 	<string name="male_radio">male</string>
 	<string name="version_msg">v1.0_1</string>
 	<string name="btn3">count</string>
+	<string name="TextView">Hello</string>
+	<string name="pwd_Change">修改密码</string>
+	<string name="pwd_new">新密码</string>
+	<string name="new_pwd">请输入新密码</string>
+	<string name="confirm">确认</string>
+	<string name="changepwd_Title">修改密码</string>
+	<string name="register_Title">注册</string>
+	<string name="register_name">用户名</string>
+	<string name="register_pwdConfirm">确认密码</string>
+	<string name="register_nameHint">请输入用户名</string>
+	<string name="gender_tag">性别</string>
 </resources>

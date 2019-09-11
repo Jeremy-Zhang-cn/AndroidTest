@@ -182,37 +182,16 @@
 		app:layout_constraintTop_toTopOf="@+id/guideline7"
 		tools:ignore="MissingConstraints" />
 
-	<RadioGroup
-		android:id="@+id/RadioGroup_Gender"
-		android:layout_width="188dp"
-		android:layout_height="101dp"
-		android:layout_marginTop="76dp"
-		android:layout_marginEnd="44dp"
-		android:orientation="horizontal"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="@+id/guideline5">
-
-		<RadioButton
-			android:id="@+id/male_RB"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/male_radio" />
-
-		<RadioButton
-			android:id="@+id/female_RB"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/female_radio" />
-	</RadioGroup>
-
 	<Button
-		android:id="@+id/btn3"
+		android:id="@+id/pwd_Change"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginEnd="112dp"
-		android:layout_marginBottom="92dp"
-		android:text="@string/btn3"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent" />
+		android:text="@string/pwd_Change"
+		app:layout_constraintBottom_toTopOf="@+id/guideline5"
+		app:layout_constraintEnd_toStartOf="@+id/guideline8"
+		app:layout_constraintHorizontal_bias="0.693"
+		app:layout_constraintStart_toStartOf="@+id/guideline8"
+		app:layout_constraintTop_toTopOf="@+id/guideline3"
+		app:layout_constraintVertical_bias="0.491" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
