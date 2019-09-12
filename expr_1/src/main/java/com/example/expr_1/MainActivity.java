@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 	private Button register,login;
 	private EditText name,passwd;
-//	private Button pwd_Change;
+	private Button pwd_Change;
 
 //	private RadioButton male_Button,female_Button;
 //	private RadioGroup Gender;
@@ -36,16 +36,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		name = findViewById(R.id.editText);
 		passwd = findViewById(R.id.editText4);
 
-//		pwd_Change = findViewById(R.id.confirm);
+		pwd_Change = findViewById(R.id.pwd_Change);
+
 
 		//为修改密码按钮创建事件监听器
-		/*pwd_Change.setOnClickListener(new View.OnClickListener() {
+		pwd_Change.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent_pwdChange = new Intent(MainActivity.this, Change_pwd.class);
-				startActivity(intent_pwdChange);
+				Intent intent = new Intent(MainActivity.this, Change_pwd.class);
+				if(name.getText().toString().equals("admin") && passwd.getText().toString().equals("123456")) {
+					intent.putExtra("userName",name.getText().toString());
+					startActivity(intent);
+				} else {
+					Toast.makeText(MainActivity.this,"请输入正确的用户名及密码",Toast.LENGTH_LONG).show();
+				}
 			}
-		});*/
+		});
+
 
 		/*btn3.setOnClickListener(new View.OnClickListener() {
 			@Override
