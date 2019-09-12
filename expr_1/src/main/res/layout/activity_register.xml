@@ -137,7 +137,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		app:layout_constraintGuide_percent="0.5" />
+		app:layout_constraintGuide_percent="0.65" />
 
 	<TextView
 		android:id="@+id/gender_Tag"
@@ -148,29 +148,28 @@
 		app:layout_constraintBottom_toTopOf="@+id/guideline22"
 		app:layout_constraintEnd_toStartOf="@+id/guideline18"
 		app:layout_constraintStart_toStartOf="@+id/guideline18"
-		app:layout_constraintTop_toTopOf="@+id/guideline21" />
+		app:layout_constraintTop_toTopOf="@+id/guideline24" />
 
 	<RadioGroup
 		android:id="@+id/register_Gender_RG"
-		android:layout_width="144dp"
-		android:layout_height="64dp"
-		android:layout_marginStart="76dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="52dp"
 		app:layout_constraintBottom_toTopOf="@+id/guideline22"
 		app:layout_constraintStart_toEndOf="@+id/gender_Tag"
-		app:layout_constraintTop_toTopOf="@+id/guideline21"
-		app:layout_constraintVertical_bias="0.333">
-
-		<RadioButton
-			android:id="@+id/register_male_RB"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/male_radio" />
+		app:layout_constraintTop_toTopOf="@+id/guideline24">
 
 		<RadioButton
 			android:id="@+id/register_female_RB"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/female_radio" />
+
+		<RadioButton
+			android:id="@+id/register_male_RB"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/male_radio" />
 	</RadioGroup>
 
 	<androidx.constraintlayout.widget.Guideline
@@ -178,7 +177,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
-		app:layout_constraintGuide_percent="0.55" />
+		app:layout_constraintGuide_percent="0.7" />
 
 	<Button
 		android:id="@+id/register_confirm"
@@ -189,5 +188,36 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="@+id/guideline19"
 		app:layout_constraintTop_toTopOf="@+id/guideline23" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline24"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.5" />
+
+	<TextView
+		android:id="@+id/register_EmailTag"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/register_email"
+		android:textSize="24sp"
+		app:layout_constraintBottom_toTopOf="@+id/guideline24"
+		app:layout_constraintEnd_toStartOf="@+id/guideline18"
+		app:layout_constraintStart_toStartOf="@+id/guideline18"
+		app:layout_constraintTop_toTopOf="@+id/guideline21" />
+
+	<EditText
+		android:id="@+id/register_Email"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:hint="@string/register_emailHint"
+		android:importantForAutofill="no"
+		android:inputType="text"
+		app:layout_constraintBottom_toTopOf="@+id/guideline24"
+		app:layout_constraintEnd_toStartOf="@+id/guideline19"
+		app:layout_constraintStart_toStartOf="@+id/guideline19"
+		app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

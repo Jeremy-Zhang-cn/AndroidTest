@@ -21,4 +21,6 @@
 	<string name="register_pwdConfirm">确认密码</string>
 	<string name="register_nameHint">请输入用户名</string>
 	<string name="gender_tag">性别</string>
+	<string name="register_email">邮箱</string>
+	<string name="register_emailHint">请输入邮箱</string>
 </resources>

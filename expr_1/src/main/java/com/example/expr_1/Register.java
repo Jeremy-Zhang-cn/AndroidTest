@@ -46,7 +46,8 @@ public class Register extends AppCompatActivity {
 				if ((name.getText().toString().equals("")) || (passwd.getText().toString().equals("")) || (passwdConfirm.getText().toString().equals(""))) {
 					Toast.makeText(Register.this,"请完善用户信息",Toast.LENGTH_LONG).show();
 				} else {
-					Intent intent = new Intent(Register.this,register_success.class );
+					Toast.makeText(Register.this,"注册成功",Toast.LENGTH_LONG).show();
+					Intent intent = new Intent(Register.this,MainActivity.class );
 					intent.putExtra("userName", name.getText().toString());
 					startActivity(intent);
 				}

@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 		pwd_Change = findViewById(R.id.pwd_Change);
 
+		Intent intent = getIntent();
+		name.setText(intent.getStringExtra("userName"));
+
 
 		//为修改密码按钮创建事件监听器
 		pwd_Change.setOnClickListener(new View.OnClickListener() {
