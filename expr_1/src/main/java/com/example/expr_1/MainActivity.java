@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -48,8 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			public void onClick(View view) {
 				Intent intent = new Intent(MainActivity.this, Change_pwd.class);
 				if(name.getText().toString().equals("admin") && passwd.getText().toString().equals("123456")) {
-					intent.putExtra("userName",name.getText().toString());
-					startActivity(intent);
+					Intent intent1 = new Intent(MainActivity.this,Change_pwd.class);
+					startActivityForResult(intent,1);
 				} else {
 					Toast.makeText(MainActivity.this,"请输入正确的用户名及密码",Toast.LENGTH_LONG).show();
 				}
@@ -113,5 +114,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		//点击注册时，实现页面跳转
 		Intent intent_register = new Intent(MainActivity.this,Register.class);
 		startActivity(intent_register);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if(requestCode == 1 && resultCode == 2) {
+			passwd.setText(data.getStringExtra("newPwd"));
+		}
 	}
 }

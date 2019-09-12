@@ -78,7 +78,7 @@
 		android:ems="10"
 		android:hint="@string/passwd_hint"
 		android:importantForAutofill="no"
-		android:inputType="textPassword"
+		android:inputType="textPersonName"
 		android:textAlignment="viewStart"
 		app:layout_constraintBottom_toTopOf="@+id/guideline3"
 		app:layout_constraintEnd_toEndOf="parent"
