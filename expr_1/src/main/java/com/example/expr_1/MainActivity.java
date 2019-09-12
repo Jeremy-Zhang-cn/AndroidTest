@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		pwd_Change = findViewById(R.id.pwd_Change);
 
 		Intent intent = getIntent();
-		name.setText(intent.getStringExtra("userName"));
+		name.setText(intent.getStringExtra("userName"));	//获取其他页面传输的用户名信息
 
 
 		//为修改密码按钮创建事件监听器
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				Intent intent = new Intent(MainActivity.this, Change_pwd.class);
 				if(name.getText().toString().equals("admin") && passwd.getText().toString().equals("123456")) {
 					Intent intent1 = new Intent(MainActivity.this,Change_pwd.class);
-					startActivityForResult(intent,1);
+					startActivityForResult(intent,1);	//数据回传请求
 				} else {
 					Toast.makeText(MainActivity.this,"请输入正确的用户名及密码",Toast.LENGTH_LONG).show();
 				}
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if(requestCode == 1 && resultCode == 2) {
-			passwd.setText(data.getStringExtra("newPwd"));
+			passwd.setText(data.getStringExtra("newPwd"));	//接收回传数据
 		}
 	}
 }

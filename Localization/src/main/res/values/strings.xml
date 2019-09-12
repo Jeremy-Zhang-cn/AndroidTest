@@ -1,0 +1,6 @@
+<resources>
+	<string name="app_name">Localization</string>
+	<string name="title_tag">localization</string>
+	<string name="show_btn">show</string>
+	<string name="message_info">This is a message</string>
+</resources>

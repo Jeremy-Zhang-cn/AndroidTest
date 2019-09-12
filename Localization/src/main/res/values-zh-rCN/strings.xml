@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">本地化</string>
+	<string name="title_tag">本地化</string>
+	<string name="message_info">这是一条信息</string>
+	<string name="show_btn">显示</string>
+</resources>
