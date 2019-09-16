@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Register extends AppCompatActivity {
 
 	private Button confirm;
-	private EditText name,passwd,passwdConfirm;
+	private EditText name,passwd,passwdConfirm,email,phone;
 	private RadioButton male_Button,female_Button;
 	private RadioGroup Gender;
 
@@ -30,6 +30,8 @@ public class Register extends AppCompatActivity {
 		name = findViewById(R.id.register_name);
 		passwd = findViewById(R.id.register_pwd);
 		passwdConfirm = findViewById(R.id.register_pwdConfirm);
+		email = findViewById(R.id.register_Email);
+		phone = findViewById(R.id.register_Phone);
 
 		Gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 			@Override
@@ -40,7 +42,7 @@ public class Register extends AppCompatActivity {
 		});
 
 		//为确认按钮添加监听器，实现对文本框内容判断并进行页面跳转
-		confirm.setOnClickListener(new View.OnClickListener() {
+		/*confirm.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				if ((name.getText().toString().equals("")) || (passwd.getText().toString().equals("")) || (passwdConfirm.getText().toString().equals(""))) {
@@ -49,6 +51,28 @@ public class Register extends AppCompatActivity {
 					Toast.makeText(Register.this,"注册成功",Toast.LENGTH_LONG).show();
 					Intent intent = new Intent(Register.this,MainActivity.class );
 					intent.putExtra("userName", name.getText().toString());
+					startActivity(intent);
+				}
+			}
+		});*/
+
+		confirm.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if ((name.getText().toString().equals("")) || (passwd.getText().toString().equals("")) || (passwdConfirm.getText().toString().equals(""))) {
+					Toast.makeText(Register.this,"请完善用户信息",Toast.LENGTH_LONG).show();
+				} else {
+					Toast.makeText(Register.this,"注册成功",Toast.LENGTH_LONG).show();
+					String userName = name.getText().toString();
+					String userPasswd = passwd.getText().toString();
+					String userPasswdConfirm = passwdConfirm.getText().toString();
+					String userEmail = email.getText().toString();
+					String userPhone = phone.getText().toString();
+					userInfo user1 = new userInfo(userName,userPasswd,userPhone,userEmail);
+					Bundle bundle = new Bundle();
+					bundle.putSerializable("info",user1);
+					Intent intent = new Intent(Register.this,show_Info.class);
+					intent.putExtras(bundle);
 					startActivity(intent);
 				}
 			}

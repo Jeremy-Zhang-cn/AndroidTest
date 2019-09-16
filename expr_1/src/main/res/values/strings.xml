@@ -23,4 +23,8 @@
 	<string name="gender_tag">性别</string>
 	<string name="register_email">邮箱</string>
 	<string name="register_emailHint">请输入邮箱</string>
+	<string name="info_Change">修改信息</string>
+	<string name="register_PhoneTag">电话</string>
+	<string name="register_PhoneHint">请输入手机号</string>
+	<string name="changedInfo_Name">用户名</string>
 </resources>

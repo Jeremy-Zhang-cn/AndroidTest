@@ -9,7 +9,9 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
-		<activity android:name=".register_success"></activity>
+		<activity android:name=".userInfo_Change"></activity>
+		<activity android:name=".show_Info" />
+		<activity android:name=".register_success" />
 		<activity android:name=".Register" />
 		<activity android:name=".Change_pwd" />
 		<activity android:name=".Activity2" />
