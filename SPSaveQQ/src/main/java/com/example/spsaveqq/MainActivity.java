@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.spsaveqq;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,13 +9,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.IOException;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-	private EditText et_account;
-	private EditText et_password;
+
+	private EditText et_account,et_password;
 	private Button btn_login;
 
 	@Override
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 		et_password = findViewById(R.id.userPasswd);
 		btn_login = findViewById(R.id.login_btn);
 
-		Map<String,String> userInfo = fileSaveQQ.getUserInfo(this);
+		Map<String,String> userInfo = SPSaveQQ.getUserInfo(this);
 		if(userInfo != null) {
 			et_account.setText(userInfo.get("account"));
 			et_password.setText(userInfo.get("password"));
@@ -50,11 +49,7 @@ public class MainActivity extends AppCompatActivity {
 				Toast.makeText(MainActivity.this,"登陆成功",Toast.LENGTH_SHORT).show();
 
 				boolean isSaveSuccess = false;
-				try {
-					isSaveSuccess = fileSaveQQ.saveUserInfo(MainActivity.this,account,password);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				isSaveSuccess = SPSaveQQ.saveUserInfo(MainActivity.this,account,password);
 
 				if(isSaveSuccess) {
 					Toast.makeText(MainActivity.this,"保存成功",Toast.LENGTH_SHORT).show();
@@ -64,7 +59,4 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 	}
-
-
-
 }

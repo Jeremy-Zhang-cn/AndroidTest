@@ -23,20 +23,30 @@ public class show_Info extends AppCompatActivity {
 		show_Phone = findViewById(R.id.show_Phone);
 		show_Email = findViewById(R.id.show_Email);
 		info_Change = findViewById(R.id.info_Change);
-		userInfo user = (userInfo)getIntent().getSerializableExtra("info");
+		final userInfo user1 = (userInfo)getIntent().getSerializableExtra("info");
 		Intent intent = getIntent();
 
 		setTitle("用户注册信息");
-		show_Name.setText("用户名："+user.getUserName());
-		show_Passwd.setText("密码："+user.getPasswd());
-		show_Phone.setText("手机号:"+user.getPhone());
-		show_Email.setText("邮箱："+user.getEmail());
+		show_Name.setText("用户名："+user1.getUserName());
+		show_Passwd.setText("密码："+user1.getPasswd());
+		show_Phone.setText("手机号:"+user1.getPhone());
+		show_Email.setText("邮箱："+user1.getEmail());
 
-		//修改信息监听器
+		//修改信息的监听器
 		info_Change.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 
+				String userName = user1.getUserName();
+				String userPasswd = user1.getPasswd();
+				String userEmail = user1.getEmail();
+				String userPhone = user1.getPhone();
+				userInfo user = new userInfo(userName,userPasswd,userPhone,userEmail);
+				Bundle bundle = new Bundle();
+				bundle.putSerializable("info1",user);
+				Intent intent = new Intent(show_Info.this,userInfo_Change.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
 			}
 		});
 

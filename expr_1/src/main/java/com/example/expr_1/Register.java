@@ -62,6 +62,7 @@ public class Register extends AppCompatActivity {
 				if ((name.getText().toString().equals("")) || (passwd.getText().toString().equals("")) || (passwdConfirm.getText().toString().equals(""))) {
 					Toast.makeText(Register.this,"请完善用户信息",Toast.LENGTH_LONG).show();
 				} else {
+					if ((passwd.getText().toString()).equals(passwdConfirm.getText().toString())){
 					Toast.makeText(Register.this,"注册成功",Toast.LENGTH_LONG).show();
 					String userName = name.getText().toString();
 					String userPasswd = passwd.getText().toString();
@@ -74,6 +75,9 @@ public class Register extends AppCompatActivity {
 					Intent intent = new Intent(Register.this,show_Info.class);
 					intent.putExtras(bundle);
 					startActivity(intent);
+					} else {
+						Toast.makeText(Register.this,"两次输入的密码不一致",Toast.LENGTH_LONG).show();
+					}
 				}
 			}
 		});

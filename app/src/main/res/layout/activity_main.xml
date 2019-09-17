@@ -7,7 +7,7 @@
 	tools:context=".MainActivity">
 
 	<EditText
-		android:id="@+id/editText"
+		android:id="@+id/userName"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		android:ems="10"
@@ -33,7 +33,7 @@
 		app:srcCompat="@drawable/mypicture" />
 
 	<EditText
-		android:id="@+id/editText2"
+		android:id="@+id/userPasswd"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		android:ems="10"
@@ -46,7 +46,7 @@
 		app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
 	<Button
-		android:id="@+id/button"
+		android:id="@+id/login_btn"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		android:text="@string/botton_msg"
@@ -56,7 +56,7 @@
 		app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
 	<TextView
-		android:id="@+id/textView"
+		android:id="@+id/version_Tag"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="@string/version_msg"
