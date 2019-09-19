@@ -1,2 +1,2 @@
-include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle', ':UIDemo', ':Localization', ':SPSaveQQ', ':storeSample', ':SQLiteExample'
+include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle', ':UIDemo', ':Localization', ':SPSaveQQ', ':storeSample', ':SQLiteExample', ':storeSample'
 rootProject.name='My Application'

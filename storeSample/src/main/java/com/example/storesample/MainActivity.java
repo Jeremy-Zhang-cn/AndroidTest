@@ -17,68 +17,85 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+	private EditText et_input;
+	private TextView et_show;
+	private Button btn_save, btn_read;
 
-	EditText et_input;
-	TextView showContent;
-	Button btn_save,btn_read;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		requestPermission();
 
 		et_input = findViewById(R.id.et_input);
-		showContent = findViewById(R.id.showContent);
+		et_show = findViewById(R.id.et_show);
 		btn_save = findViewById(R.id.btn_save);
 		btn_read = findViewById(R.id.btn_read);
 
-		btn_save.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				File state = Environment.getExternalStorageDirectory();
 
-				if(state.equals(Environment.MEDIA_MOUNTED)) {
+		btn_save.setOnClickListener(this);
+		btn_read.setOnClickListener(this);
+
+		requestPermission();
+
+	}
+
+	@Override
+	public void onClick(View view) {
+
+		switch (view.getId()) {
+
+			case R.id.btn_save:
+
+				String state = Environment.getExternalStorageState();
+				if (state.equals(Environment.MEDIA_MOUNTED)) {
 					File sdPath = Environment.getExternalStorageDirectory();
-					File sdFile = new File(sdPath,"data.txt");
+					File sdFile = new File(sdPath, "data.txt");
 					String content = et_input.getText().toString();
 					FileOutputStream fos = null;
 
 					try {
-						fos = new FileOutputStream(sdFile);
-						fos.write(content.getBytes());
-						Toast.makeText(MainActivity.this,"存储成功",Toast.LENGTH_LONG).show();
 
+						fos = new FileOutputStream(sdFile,true);
+						fos.write(content.getBytes());
+						fos.flush();
+						Toast.makeText(MainActivity.this, "存储成功", Toast.LENGTH_SHORT).show();
 					} catch (IOException e) {
 						e.printStackTrace();
+						Toast.makeText(MainActivity.this, "存储失败", Toast.LENGTH_SHORT).show();
 					} finally {
-						if (fos!=null) {
+						if (fos != null) {
 							try {
 								fos.close();
-							} catch (Exception e) {
+							} catch (IOException e) {
 								e.printStackTrace();
 							}
 						}
 					}
 
 				} else {
-					Toast.makeText(MainActivity.this,"cannot read SD card",Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this, "cannot read SD card", Toast.LENGTH_SHORT).show();
 				}
-			}
-		});
+				break;
+
+			case R.id.btn_read:
+
+
+
+				break;
+		}
 	}
 
-	//权限请求
 	public void requestPermission() {
-		if (Build.VERSION.SDK_INT>=23) {
-			String [] PERMISSION_STORAGE = {
+		if (Build.VERSION.SDK_INT >= 23) {
+			String[] PERMISSION_STORAGE = {
 					Manifest.permission.WRITE_EXTERNAL_STORAGE,
 					Manifest.permission.READ_EXTERNAL_STORAGE
 			};
-			if (this.checkSelfPermission(PERMISSION_STORAGE[0])!= PackageManager.PERMISSION_GRANTED) {
-				this.requestPermissions(PERMISSION_STORAGE,101);
+			if (this.checkSelfPermission(PERMISSION_STORAGE[0]) != PackageManager.PERMISSION_GRANTED) {
+				this.requestPermissions(PERMISSION_STORAGE, 101);
 			}
 		}
 	}

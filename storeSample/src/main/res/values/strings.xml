@@ -1,6 +1,7 @@
 <resources>
-	<string name="app_name">SD card operating</string>
+	<string name="app_name">store sample</string>
+	<string name="et_input">请输入文字</string>
+	<string name="et_show">点击查看</string>
 	<string name="btn_save">保存</string>
 	<string name="btn_read">读取</string>
-	<string name="et_input">输入内容</string>
 </resources>
