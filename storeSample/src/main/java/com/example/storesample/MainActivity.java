@@ -13,9 +13,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			case R.id.btn_save:
 
 				String state = Environment.getExternalStorageState();
+
 				if (state.equals(Environment.MEDIA_MOUNTED)) {
 					File sdPath = Environment.getExternalStorageDirectory();
 					File sdFile = new File(sdPath, "data.txt");
@@ -82,20 +86,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 			case R.id.btn_read:
 
+				String state1 = Environment.getExternalStorageState();
+				if (state1.equals(Environment.MEDIA_MOUNTED)) {
+					File SDPath = Environment.getExternalStorageDirectory();
+					File file = new File(SDPath, "data.txt");
+					FileInputStream fis = null;
+					BufferedReader br = null;
 
+					try {
+
+						fis = new FileInputStream(file);
+						br = new BufferedReader(new InputStreamReader(fis));
+						String data = br.readLine();
+						et_show.setText(data);
+
+					} catch (IOException e) {
+						e.printStackTrace();
+					} finally {
+						if (br != null) {
+							try {
+								br.close();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+						}
+						if (fis != null) {
+							try {
+								fis.close();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+						}
+					}
+
+				}
 
 				break;
 		}
 	}
 
 	public void requestPermission() {
+
 		if (Build.VERSION.SDK_INT >= 23) {
+
+			int REQUEST_CODE_CONTACT = 101;
 			String[] PERMISSION_STORAGE = {
 					Manifest.permission.WRITE_EXTERNAL_STORAGE,
 					Manifest.permission.READ_EXTERNAL_STORAGE
 			};
-			if (this.checkSelfPermission(PERMISSION_STORAGE[0]) != PackageManager.PERMISSION_GRANTED) {
+
+		/*	if (this.checkSelfPermission(PERMISSION_STORAGE[0]) != PackageManager.PERMISSION_GRANTED) {
 				this.requestPermissions(PERMISSION_STORAGE, 101);
+			}*/
+
+			for (String str : PERMISSION_STORAGE) {
+
+				if (this.checkSelfPermission(str) != PackageManager.PERMISSION_GRANTED) {
+
+				this.requestPermissions(PERMISSION_STORAGE,REQUEST_CODE_CONTACT);
+				return;
+
+				}
 			}
 		}
 	}

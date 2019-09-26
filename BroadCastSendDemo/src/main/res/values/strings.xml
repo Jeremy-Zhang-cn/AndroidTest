@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">send broadcast</string>
+	<string name="btn_sendBroad">发送广播</string>
+	<string name="btn_randomCast">发送有序广播</string>
+</resources>

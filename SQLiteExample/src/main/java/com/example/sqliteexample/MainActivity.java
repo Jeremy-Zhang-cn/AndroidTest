@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+
 
 		myDBHelper = new MyDBHelper(this);
 		mTvShow = findViewById(R.id.tv_Show);
@@ -96,8 +98,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 			case  R.id.btn_delete:	//删除
 				db = myDBHelper.getWritableDatabase();
-				db.delete("userInfo",null,null);
-				Toast.makeText(MainActivity.this,"信息已删除",Toast.LENGTH_SHORT).show();
+				try {
+					db.delete("userInfo",null,null);
+					Toast.makeText(MainActivity.this,"信息已删除",Toast.LENGTH_SHORT).show();
+				} catch (Exception e) {
+					e.printStackTrace();
+					Toast.makeText(MainActivity.this,"无数据",Toast.LENGTH_SHORT).show();
+				}
+
 				mTvShow.setText("");
 				db.close();
 				break;
