@@ -1,0 +1,58 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.sqliteexample"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:5:2-27:16
+12        android:allowBackup="true"
+12-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:6:3-29
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.0.1] C:\Users\Jeremy\.gradle\caches\transforms-2\files-2.1\72b2b92ec4ab73ff21fb9bc348de3b22\core-1.0.1\AndroidManifest.xml:22:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:7:3-37
+16        android:label="@string/app_name"
+16-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:8:3-35
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:9:3-48
+18        android:supportsRtl="true"
+18-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:10:3-29
+19        android:theme="@style/AppTheme" >
+19-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:11:3-34
+20        <provider
+20-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:13:3-18:14
+21            android:name="com.example.sqliteexample.MyContentProvider"
+21-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:15:4-37
+22            android:authorities="com.example.sqliteexample"
+22-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:14:4-51
+23            android:enabled="true"
+23-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:16:4-26
+24            android:exported="true" >
+24-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:17:4-27
+25        </provider>
+26
+27        <activity android:name="com.example.sqliteexample.MainActivity" >
+27-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:20:3-26:14
+27-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:20:13-41
+28            <intent-filter>
+28-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:21:4-25:20
+29                <action android:name="android.intent.action.MAIN" />
+29-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:22:5-57
+29-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:22:13-54
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:24:5-65
+31-->D:\files\AndroidPros\MyApplication\SQLiteExample\src\main\AndroidManifest.xml:24:15-62
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>

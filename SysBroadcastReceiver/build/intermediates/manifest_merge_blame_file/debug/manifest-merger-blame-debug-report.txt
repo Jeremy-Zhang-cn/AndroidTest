@@ -1,0 +1,56 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.sysbroadcastreceiver"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="15"
+8-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:5:2-24:16
+12        android:allowBackup="true"
+12-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:6:3-29
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.1.0] C:\Users\Jeremy\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:7:3-37
+16        android:label="@string/app_name"
+16-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:8:3-35
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:9:3-48
+18        android:supportsRtl="true"
+18-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:10:3-29
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:11:3-34
+21        <receiver
+21-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:12:3-15:39
+22            android:name="com.example.sysbroadcastreceiver.MyReceiver"
+22-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:13:4-30
+23            android:enabled="true"
+23-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:14:4-26
+24            android:exported="true" />
+24-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:15:4-27
+25
+26        <activity android:name="com.example.sysbroadcastreceiver.MainActivity" >
+26-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:17:3-23:14
+26-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:17:13-41
+27            <intent-filter>
+27-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:18:4-22:20
+28                <action android:name="android.intent.action.MAIN" />
+28-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:19:5-57
+28-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:19:13-54
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:21:5-65
+30-->D:\files\AndroidPros\MyApplication\SysBroadcastReceiver\src\main\AndroidManifest.xml:21:15-62
+31            </intent-filter>
+32        </activity>
+33    </application>
+34
+35</manifest>
