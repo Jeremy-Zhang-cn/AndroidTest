@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">SP saveQQ</string>
+	<string name="version_Tag">v1.0_2</string>
+	<string name="userName">输入用户名</string>
+	<string name="userPasswd">输入密码</string>
+	<string name="login_btn">登录</string>
+	<string name="userIcon">用户图标</string>
+</resources>

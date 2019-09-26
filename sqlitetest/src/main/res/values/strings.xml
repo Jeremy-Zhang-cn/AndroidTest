@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Contacts</string>
+	<string name="nameHint">输入姓名</string>
+	<string name="phoneHint">输入手机号</string>
+	<string name="nameTag">姓名：</string>
+	<string name="phoneTag">手机号：</string>
+	<string name="btn_add">添加</string>
+	<string name="btn_query">查询</string>
+	<string name="btn_modify">修改</string>
+	<string name="btn_delete">删除</string>
+	<string name="show">用户信息</string>
+</resources>

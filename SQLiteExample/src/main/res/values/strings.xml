@@ -1,0 +1,11 @@
+<resources>
+	<string name="app_name">通讯录</string>
+	<string name="phoneTag">电话：</string>
+	<string name="nameTag">姓名：</string>
+	<string name="nameHint">请输入姓名</string>
+	<string name="phone">请输入手机号</string>
+	<string name="btn_add">添加</string>
+	<string name="btn_query">查询</string>
+	<string name="btn_mofidy">修改</string>
+	<string name="btn_delete">删除</string>
+</resources>
