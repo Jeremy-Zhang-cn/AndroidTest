@@ -1,0 +1,8 @@
+<resources>
+	<string name="app_name">My Service</string>
+	<string name="startService">start service</string>
+	<string name="stopService">stop service</string>
+	<string name="bindService">bind service</string>
+	<string name="unbindService">unbind service</string>
+	<string name="btn_call">call method in service</string>
+</resources>
