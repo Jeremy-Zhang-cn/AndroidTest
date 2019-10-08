@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">Timer</string>
+	<string name="inputHint">请输入时间</string>
+	<string name="btn_start">开始计时</string>
+</resources>

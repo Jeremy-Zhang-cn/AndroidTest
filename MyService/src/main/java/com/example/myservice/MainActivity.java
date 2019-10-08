@@ -4,23 +4,28 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-	private Button btn_start,btn_stop,btn_bind,btn_unbind,btn_call;
-	private TextView tv_time;
+	private Button btn_start, btn_stop, btn_bind, btn_unbind, btn_call;
+	private TextView tv_time, tv_InstantTime;
 	private MyService.MyBinder myBinder;
 	private MyConn myConn;
-
+	private Handler mHandler;
 
 
 	@Override
@@ -35,10 +40,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		btn_unbind = findViewById(R.id.btn_unbind);
 		btn_call = findViewById(R.id.btn_call);
 		tv_time = findViewById(R.id.tv_timeStamp);
+		tv_InstantTime = findViewById(R.id.tv_InstantTime);
+		new TimeThread().start();
 
 		btn_bind.setOnClickListener(this);
 		btn_call.setOnClickListener(this);
 		btn_unbind.setOnClickListener(this);
+
+		mHandler = new Handler() {
+
+			@Override
+			public void handleMessage(@NonNull Message msg) {
+				super.handleMessage(msg);
+				switch (msg.what) {
+					case 1:
+						SimpleDateFormat simpleDateFormat = new SimpleDateFormat
+								("YYYY--MM--dd HH:mm:ss");
+						Date date = new Date(System.currentTimeMillis());
+						tv_InstantTime.setText(simpleDateFormat.format(date));
+						break;
+
+					default:
+						break;
+				}
+			}
+		};
 
 		btn_start.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -66,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.btn_bind:
-				if(myConn == null) {
+				if (myConn == null) {
 					myConn = new MyConn();
 				}
 				Intent intent = new Intent(MainActivity.this, MyService.class);
@@ -78,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 
 			case R.id.btn_unbind:
-				if(myConn != null) {
+				if (myConn != null) {
 					unbindService(myConn);
 					myConn = null;
 				}
@@ -101,5 +127,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		}
 	}
 
+	public class TimeThread extends Thread {
 
+		@Override
+		public void run() {
+			do {
+				try {
+					Thread.sleep(1000);
+					Message msg = new Message();
+					msg.what = 1;
+					mHandler.sendMessage(msg);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			} while (true);
+		}
+	}
 }
