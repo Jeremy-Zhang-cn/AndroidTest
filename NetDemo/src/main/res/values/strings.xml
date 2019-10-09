@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">view image</string>
+	<string name="et_address">请输入图片链接</string>
+	<string name="btn_check">浏览</string>
+	<string name="btn_clear">清除</string>
+	<string name="mypicture">mypicture</string>
+</resources>

@@ -1,2 +1,2 @@
-include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle', ':UIDemo', ':Localization', ':SPSaveQQ', ':storeSample', ':SQLiteExample', ':storeSample', ':Contacts', ':BroadCastReceiveDemo', ':BroadCastSendDemo', ':sqlitedb', ':sqlitetest', ':SysBroadcastReceiver', ':MyService', ':MusicPlayer', ':Timer', ':DrawCircle', ':MultiTouch'
+include ':app', ':expr_1', ':relativeSample', ':tableSample', ':lifeCycle', ':UIDemo', ':Localization', ':SPSaveQQ', ':storeSample', ':SQLiteExample', ':storeSample', ':Contacts', ':BroadCastReceiveDemo', ':BroadCastSendDemo', ':sqlitedb', ':sqlitetest', ':SysBroadcastReceiver', ':MyService', ':MusicPlayer', ':Timer', ':DrawCircle', ':MultiTouch', ':NetDemo'
 rootProject.name='My Application'
