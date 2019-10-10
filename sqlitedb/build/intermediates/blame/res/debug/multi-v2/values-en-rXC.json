@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\files\\AndroidPros\\MyApplication2\\sqlitedb\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
+            "outputFile": "D:\\files\\AndroidPros\\MyApplication\\sqlitedb\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-2\\files-2.1\\37ec02f661e3547c5499ecdfd9f3cd1f\\appcompat-1.1.0\\res\\values-en-rXC\\values-en-rXC.xml",

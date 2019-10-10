@@ -25,22 +25,23 @@
 17-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:9:3-48
 18        android:supportsRtl="true"
 18-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:10:3-29
-19        android:theme="@style/AppTheme" >
-19-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:11:3-34
-20        <activity android:name="com.example.broadcastsenddemo.MainActivity" >
-20-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:12:3-18:14
-20-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:12:13-41
-21            <intent-filter>
-21-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:13:4-17:20
-22                <action android:name="android.intent.action.MAIN" />
-22-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:14:5-57
-22-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:14:13-54
-23
-24                <category android:name="android.intent.category.LAUNCHER" />
-24-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:16:5-65
-24-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:16:15-62
-25            </intent-filter>
-26        </activity>
-27    </application>
-28
-29</manifest>
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:11:3-34
+21        <activity android:name="com.example.broadcastsenddemo.MainActivity" >
+21-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:12:3-18:14
+21-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:12:13-41
+22            <intent-filter>
+22-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:13:4-17:20
+23                <action android:name="android.intent.action.MAIN" />
+23-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:14:5-57
+23-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:14:13-54
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:16:5-65
+25-->D:\files\AndroidPros\MyApplication\BroadCastSendDemo\src\main\AndroidManifest.xml:16:15-62
+26            </intent-filter>
+27        </activity>
+28    </application>
+29
+30</manifest>

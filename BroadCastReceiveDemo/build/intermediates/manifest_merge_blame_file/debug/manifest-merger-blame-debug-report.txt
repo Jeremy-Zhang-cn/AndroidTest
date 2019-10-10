@@ -25,47 +25,48 @@
 17-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:9:3-48
 18        android:supportsRtl="true"
 18-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:10:3-29
-19        android:theme="@style/AppTheme" >
-19-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:11:3-34
-20        <receiver
-20-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:12:3-15:39
-21            android:name="com.example.broadcastdemo.MyReceiver3"
-21-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:13:4-31
-22            android:enabled="true"
-22-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:14:4-26
-23            android:exported="true" />
-23-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:15:4-27
-24        <receiver
-24-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:16:3-19:30
-25            android:name="com.example.broadcastdemo.MyReceiver2"
-25-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:17:4-31
-26            android:enabled="true"
-26-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:18:4-26
-27            android:exported="true" />
-27-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:19:4-27
-28        <receiver
-28-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:20:3-23:30
-29            android:name="com.example.broadcastdemo.MyReceiver"
-29-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:21:4-30
-30            android:enabled="true"
-30-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:22:4-26
-31            android:exported="true" />
-31-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:23:4-27
-32
-33        <activity android:name="com.example.broadcastdemo.MainActivity" >
-33-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:25:3-31:14
-33-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:25:13-41
-34            <intent-filter>
-34-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:26:4-30:20
-35                <action android:name="android.intent.action.MAIN" />
-35-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:27:5-57
-35-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:27:13-54
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:29:5-65
-37-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:29:15-62
-38            </intent-filter>
-39        </activity>
-40    </application>
-41
-42</manifest>
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:11:3-34
+21        <receiver
+21-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:12:3-15:39
+22            android:name="com.example.broadcastdemo.MyReceiver3"
+22-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:13:4-31
+23            android:enabled="true"
+23-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:14:4-26
+24            android:exported="true" />
+24-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:15:4-27
+25        <receiver
+25-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:16:3-19:30
+26            android:name="com.example.broadcastdemo.MyReceiver2"
+26-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:17:4-31
+27            android:enabled="true"
+27-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:18:4-26
+28            android:exported="true" />
+28-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:19:4-27
+29        <receiver
+29-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:20:3-23:30
+30            android:name="com.example.broadcastdemo.MyReceiver"
+30-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:21:4-30
+31            android:enabled="true"
+31-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:22:4-26
+32            android:exported="true" />
+32-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:23:4-27
+33
+34        <activity android:name="com.example.broadcastdemo.MainActivity" >
+34-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:25:3-31:14
+34-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:25:13-41
+35            <intent-filter>
+35-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:26:4-30:20
+36                <action android:name="android.intent.action.MAIN" />
+36-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:27:5-57
+36-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:27:13-54
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:29:5-65
+38-->D:\files\AndroidPros\MyApplication\BroadCastReceiveDemo\src\main\AndroidManifest.xml:29:15-62
+39            </intent-filter>
+40        </activity>
+41    </application>
+42
+43</manifest>

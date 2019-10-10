@@ -1,4 +1,4 @@
-#Wed Sep 25 22:36:22 CST 2019
-base.0=D\:\\files\\AndroidPros\\MyApplication2\\sqlitedb\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Thu Oct 10 08:35:42 CST 2019
+base.0=D\:\\files\\AndroidPros\\MyApplication\\sqlitedb\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
